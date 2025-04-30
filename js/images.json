@@ -1,0 +1,256 @@
+{ "images": [
+    {
+      "imgId": 5,
+      "file": "DAPPLED DISGUISE.jpg",
+      "alt": "a painting of flowers on a white background",
+      "year": " (2024)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas",
+      "size": "1.22m x 0.91m",
+      "price": "<s>2,800</s> **SOLD**"
+    },
+    {
+      "imgId": 1,
+      "file": "2 hearts.jpg",
+      "alt": "a drawing of two people standing next to each other people",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 2,
+      "file": "3 sisters.jpg",
+      "alt": "three people on a wire with one holding a ball",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 3,
+      "file": "am in a hole.jpg",
+      "alt": "a painting with many different colors and shapes",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 4,
+      "file": "birds without legs.jpg",
+      "alt": "two people sitting on a bench with a bird above them",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 6,
+      "file": "dinning.jpg",
+      "alt": "a painting of a table with a black cat",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 7,
+      "file": "Going out.jpg",
+      "alt": "a painting of a dresser with a lamp and a vase",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 8,
+      "file": "granpas pots.jpg",
+      "alt": "a painting of a vase and bowl on a table",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 9,
+      "file": "P young.jpg",
+      "alt": "a woman in a black dress posing for a photo",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 10,
+      "file": "paint1.png",
+      "alt": "a painting of a white butterfly on a pink and yellow background",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 11,
+      "file": "paint2.png",
+      "alt": "a painting with lots of paint on it",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 12,
+      "file": "paint3.png",
+      "alt": "an abstract painting with orange, blue and green colors",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 13,
+      "file": "paint4.png",
+      "alt": "an abstract painting with orange and green colors",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 14,
+      "file": "paint5.png",
+      "alt": "a painting with a yellow and red paint stroke",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 15,
+      "file": "Pernille at the RA Summer Exhibition 2024.jpg",
+      "alt": "a woman standing next to a cardboard box",
+      "year": "",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 16,
+      "file": "print Feb24.jpg",
+      "alt": "a painting with a red circle on it",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 17,
+      "file": "rocket banner.jpg",
+      "alt": "a rocket ship made from a paper bag",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 18,
+      "file": "Staying in no2.jpg",
+      "alt": "a painting of a couch and lamp on a table",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 19,
+      "file": "Staying in.jpg",
+      "alt": "a painting of a chair and lamp on a table",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 20,
+      "file": "talk show.jpg",
+      "alt": "a drawing of a square with orange and black squares",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 21,
+      "file": "the church in my mind.jpg",
+      "alt": "a drawing of a penguin with a yellow and black stripe",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 22,
+      "file": "therapy in Brixton.jpg",
+      "alt": "a painting of a woman sitting on a bench",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    },
+    {
+      "imgId": 23,
+      "file": "unicorns.jpg",
+      "alt": "a painting with the words, ' i don '",
+      "year": " (2025)",
+      "title": "Magna feugiat lorem",
+      "info": "Sound Spinning images.",
+      "type": "Canvas / Print",
+      "size": "N/A",
+      "price": "N/A"
+    }
+  ]
+}
