@@ -126,7 +126,7 @@ a:visited {
 }
 
 @keyframes showup {
-  0% {opacity:0;}
+  0% {opacity:0.3;}
   20% {opacity:1;}
   80% {opacity:1;}
   100% {opacity:0;}
@@ -274,13 +274,13 @@ article img:hover {
   top: 25vh;
 }
 
-#intro-text div:nth-of-type(1) {
+/* #intro-text div:nth-of-type(1) {
   animation: showup 7s;
-}
+} */
 
 #intro-text div:nth-of-type(2) {
   display: none;
-  animation: reveal 5s infinite;
+  /* animation: reveal 5s infinite; */
 }
 
 #intro-text div span {
@@ -290,7 +290,7 @@ article img:hover {
 #intro-text div:nth-of-type(3) {
   /* display: inline-block; */
   display: none;
-  animation: reveal 7s infinite;
+  /* animation: reveal 7s infinite; */
   position: absolute;
   top: 25vh;
 }

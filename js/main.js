@@ -47,8 +47,11 @@ function init() {
   var aboutModal = document.getElementById("about-modal");
   var controlsModal = document.getElementById("controls-modal");
   document.querySelector("#intro-text div:nth-of-type(1)").style.display = "flex";
+  document.querySelector("#intro-text div:nth-of-type(1)").style.animation = "showup 7s";
   document.querySelector("#intro-text div:nth-of-type(2)").style.display = "flex";
+  document.querySelector("#intro-text div:nth-of-type(2)").style.animation = "reveal 5s infinite";
   document.querySelector("#intro-text div:nth-of-type(3)").style.display = "inline-block";
+  document.querySelector("#intro-text div:nth-of-type(3)").style.animation = "reveal 7s infinite";
   introModal.style.animation = "slideOut 2s 5s";
   loader.style.animation = "showup 2s infinite";
   setTimeout(()=>{
