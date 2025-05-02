@@ -7,7 +7,7 @@ var imgix_path = "https://sound-spinning-pics.imgix.net/pernille/";
 // imgix settings, appended after image filename.
 // Input width value `w=` right.
 var imgix_ops = "?w=800&auto=compress,enhance,format";
-var index = 0;
+// var index = 0;
 
 // START parsing file list
 fetch('js/images.json')
@@ -17,16 +17,16 @@ fetch('js/images.json')
   const dataImgs = data.images;
   // Append images to HTML
   for (const img of dataImgs) {
-    index += 1;
+    // index += 1;
     main_grid.innerHTML +=
-`     <!-- IMG${index} -->
+`     <!-- IMG${img.imgId} -->
 			<article>
-				<img src="${imgix_path}${img.file}${imgix_ops}" alt="${img.alt}" loading="lazy" data-id="${index}" title="${img.file.split(/\.(?=[^\.]+$)/)[0]}"/>
-				<h2>${index}.-${img.file.split(/\.(?=[^\.]+$)/)[0]}${img.year}<span> ${img.alt}</span></h2>
+				<img src="${imgix_path}${img.file}${imgix_ops}" alt="${img.alt}" loading="lazy" data-id="${img.imgId}" title="${img.file.split(/\.(?=[^\.]+$)/)[0]}"/>
+				<h2>${img.imgId}.-${img.file.split(/\.(?=[^\.]+$)/)[0]}${img.year}<span> ${img.alt}</span></h2>
 				<details>
 					<summary> Info </summary>
 					<p>
-						<span>${img.type}</span> <span><b>Size</b>: ${img.size}</span> <span><b>Price</b>: &pound;${img.price} + P&amp;P</span> <button role="button">Buy</button>
+						<span>${img.type}</span> <span><b>Size</b>: ${img.size}</span> <span><b>Price</b>: &pound;${img.imgId} + P&amp;P</span> <button role="button">Buy</button>
 					</p>
 				</details>
 			</article>`;
@@ -42,12 +42,22 @@ fetch('js/images.json')
 function init() {
   // Get the modals
   var introModal = document.getElementById("intro-modal");
+  var loader = document.querySelector(".loader");
   var modal = document.getElementById("main-modal");
   var aboutModal = document.getElementById("about-modal");
   var controlsModal = document.getElementById("controls-modal");
+  document.querySelector("#intro-text div:nth-of-type(1)").style.display = "flex";
+  document.querySelector("#intro-text div:nth-of-type(2)").style.display = "flex";
+  document.querySelector("#intro-text div:nth-of-type(3)").style.display = "inline-block";
+  introModal.style.animation = "slideOut 2s 5s";
+  loader.style.animation = "showup 2s infinite";
+  setTimeout(()=>{
+    loader.style.display = "none";
+  },2000)
+
   setTimeout(()=>{
     introModal.style.display = "none";
-  },7000)
+  },6000)
   
   // MAIN modal
   // Get the image and insert it inside the modal - use its "alt" text as a caption
@@ -101,14 +111,17 @@ function init() {
   })
   
   // About box popup
+  // var footer = document.querySelector("footer");
   var footBar = document.querySelector(".foot-bar");
   var aboutBox = document.querySelector(".foot-bar > span:nth-of-type(1) > a");
   var controlsBox = document.querySelector(".foot-bar > span:nth-of-type(2) > a");
   aboutBox.onclick=()=> {
     aboutModal.style.display = "flex";
+    // footer.style.animation = "slideIn 0.8s";
     footBar.style.display = "none";
   }
   controlsBox.onclick=()=> {
+    // footer.style.animation = "slideIn 0.8s";
     controlsModal.style.display = "flex";
     footBar.style.display = "none";
   }
@@ -129,9 +142,10 @@ function init() {
         modal.style.display = "none";
         modal.style.animation = "slideIn 1s";
         aboutModal.style.display = "none";
-        aboutModal.style.animation = "slideIn 1s";
+        aboutModal.style.animation = "slideIn 0.8s";
         controlsModal.style.display = "none";
-        controlsModal.style.animation = "slideIn 1s";
+        controlsModal.style.animation = "slideIn 0.8s";
+        // footer.style.animation = "slideIn 0.8s";
         footBar.style.display = "flex";
       },500)
     }
