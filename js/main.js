@@ -8,6 +8,7 @@ var imgix_path = "https://sound-spinning-pics.imgix.net/pernille/";
 // Input width value `w=` right.
 var imgix_ops = "?w=800&auto=compress,enhance,format";
 // var index = 0;
+const main_grid = document.getElementById("grid");
 
 // START parsing file list
 fetch('js/images.json')
@@ -62,6 +63,8 @@ function init() {
     introModal.style.display = "none";
   },6000)
   
+  main_grid.style.display = "grid";
+
   // MAIN modal
   // Get the image and insert it inside the modal - use its "alt" text as a caption
   // + carousel inside the modal
@@ -114,13 +117,11 @@ function init() {
   })
   
   // About box popup
-  // var footer = document.querySelector("footer");
   var footBar = document.querySelector(".foot-bar");
   var aboutBox = document.querySelector(".foot-bar > span:nth-of-type(1) > a");
   var controlsBox = document.querySelector(".foot-bar > span:nth-of-type(2) > a");
   aboutBox.onclick=()=> {
     aboutModal.style.display = "flex";
-    // footer.style.animation = "slideIn 0.8s";
     footBar.style.display = "none";
   }
   controlsBox.onclick=()=> {
@@ -141,14 +142,12 @@ function init() {
       controlsModal.style.animation = "slideOut 1s";
       setTimeout(()=>{
         introModal.style.display = "none";
-        // introModal.style.animation = "slideIn 1s";
         modal.style.display = "none";
         modal.style.animation = "slideIn 1s";
         aboutModal.style.display = "none";
         aboutModal.style.animation = "slideIn 0.8s";
         controlsModal.style.display = "none";
         controlsModal.style.animation = "slideIn 0.8s";
-        // footer.style.animation = "slideIn 0.8s";
         footBar.style.display = "flex";
       },500)
     }
