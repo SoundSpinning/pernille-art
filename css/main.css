@@ -202,8 +202,7 @@ article h2 span {
 
 button,
 details {
-  /* z-index: 1; */
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 details p {
@@ -243,14 +242,15 @@ video {
   max-height: 80vh;
   /* max-height: 800px; */
   /* transition - <property> <duration> <timing-function> <delay>; */
-  transition: 1s;
+  transition: 0.5s;
 }
 
 article img:hover {
-  scale: 0.95;
+  /* scale: 0.95; */
+  scale: 1.05;
   filter: sepia(75%);
   cursor: pointer;
-  border-radius: 5rem;
+  border-radius: 10px;
 }
 
 /* Landing (intro) modal */
@@ -270,7 +270,7 @@ article img:hover {
   align-items: center;
   justify-content: center;  
   height: 100%;
-  font-size: calc(3rem + 1vw);
+  font-size: 3rem;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -338,9 +338,14 @@ article img:hover {
   padding: 0.5rem;
 }
 
+#modal-content > a:hover {
+  padding: 0;
+  border: 0;
+}
+
 @media screen and (max-width: 430px) {
   .foot-bar {
-    font-size: min(1rem + 1vw, 18px);
+    font-size: 1rem;
   }
   #modal-controls {
     top: unset;
@@ -352,6 +357,10 @@ article img:hover {
   }
   #intro-modal div {
     font-size: calc(2rem + 1vw);
+  }
+  details {
+    padding-left: 1rem;
+    font-size: medium;
   }
   details p {
     flex-flow: row wrap;
