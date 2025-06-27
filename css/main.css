@@ -175,7 +175,8 @@ main.grid-gallery {
   /* display: grid; */
   display: none;
   /* grid-template-columns: repeat(4, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   /* grid-template-rows: min-content 1fr min-content; */
   /* grid-auto-flow: row; */
 
@@ -221,14 +222,14 @@ details span {
 }
 
 summary {
-  text-decoration: underline 1px solid crimson;
+  text-decoration: underline 1px solid var(--link-line, crimson);
 }
 
 summary:active,
 summary:focus,
 summary:hover {
   cursor: pointer;
-  text-decoration: underline 1px dotted crimson;
+  text-decoration: underline 1px dotted var(--link-line, crimson);
 }
 
 /* Responsive images/content:
