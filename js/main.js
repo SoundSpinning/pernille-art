@@ -2,28 +2,30 @@
 var page = document.querySelector("html");
 page.style.overflowY = "hidden";
 
+// Load content via .json + .js files
+loadContent();
+
 // 
 // Read and add to HTML all images via *.json file list
 // 
 // Remember to set imgix path correctly to serve images online properly.
 // It may need a specific sub-folder name from the `Assets` repo.
 var imgix_path = "https://sound-spinning-pics.imgix.net/pernille/";
-// imgix settings, appended after image filename.
-// Input width value `w=` right.
+// imgix settings, appended after image filename. CHECK: width value `w=` is right.
 var imgix_ops = "?w=800&auto=compress,enhance,format";
-// var index = 0;
+var index = 0;
 const main_grid = document.getElementById("grid");
 
-// START parsing file list
-fetch('js/images.json')
-.then(response => response.json())
-.then(data => {
-  const main_grid = document.getElementById("grid");
-  const dataImgs = data.images;
-  // Append images to HTML
-  for (const img of dataImgs) {
-    // index += 1;
-    main_grid.innerHTML +=
+// START parsing JSON file
+async function loadContent() {
+  try {
+    const response = await fetch('js/images.json');
+    const data = await response.json();
+    const dataImgs = data.images;
+    // Append images to HTML
+    for (const img of dataImgs) {
+      index += 1;
+      main_grid.innerHTML +=
 `     <!-- IMG${img.imgId} -->
 			<article>
 				<img src="${imgix_path}${img.file}${imgix_ops}" alt="${img.alt}" loading="lazy" data-id="${img.imgId}" title="${img.file.split(/\.(?=[^\.]+$)/)[0]}"/>
@@ -31,16 +33,19 @@ fetch('js/images.json')
 				<details>
 					<summary> Info </summary>
 					<p>
-						<span>${img.type}</span> <span><b>Size</b>: ${img.size}</span> <span><b>Price</b>: &pound;${img.imgId} + P&amp;P</span> <button role="button">Buy</button>
+						<span>${img.type}</span> <span><b>Size</b>: ${img.size}</span> <span><b>Price</b>: &pound;${img.price}</span> <button role="button">Buy</button>
 					</p>
 				</details>
 			</article>`;
   }
-  // console.log("Got Here#1"); 
+  console.log(index, "Items generated"); 
   // this is called here so that the DOM has all elements required
   window.onload = init();
-})
-.catch(error => console.error("Error fetching JSON data:", error));
+  // }
+  } catch (error) {
+    console.error('Error loading media data:', error);
+  }
+}
 // END dealing with files in JSON list
 
 

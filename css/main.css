@@ -21,10 +21,16 @@
   --base-size: 16px;
   --gap: 1rem;
   --max-card-w: 400px;
-  --text-colour: black;
-  --gradDark: lavender;
-  --gradLight: white;
   --link-line: crimson;
+  /* DARK theme, for ref. See '.theme-switch__input' */
+  --light: whitesmoke;
+  --dark: #333;
+  --gradDark: #071a64;
+  --gradLight: #b90000;
+  --background: linear-gradient(90deg, var(--gradDark), var(--gradLight), var(--gradDark));
+  --nav-gradDark: rgba(0, 0, 0, 0.95);
+  --nav-gradLight: rgba(0, 0, 0, 0.8);
+  --nav-background: linear-gradient(0deg, var(--nav-gradLight), var(--nav-gradDark), var(--nav-gradLight));
 }
 
 /* FONTS: 
@@ -35,8 +41,7 @@ Pair a modern sans-serif (e.g., Inter) for body text with a monospace font (e.g.
    The specific classes method below is only for reference, not easy to maintain.
 */
 
-/* font-weight: <weight> ==> Use a value from 100 to 900
-.inter-<uniquifier> ==> Use a unique and descriptive class name */
+/* font-weight: <weight> ==> Use a value from 100 to 900 */
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -74,11 +79,11 @@ body {
   /* width: 90%; */
   /* max-width: 1200px; */
   margin: 0 auto;
-  color: var(--text-colour, black);
+  color: var(--light, black);
 }
 
 body {
-  background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+  background: var(--background);
 }
 
 /* LINKS follow an order in styling */
@@ -89,17 +94,17 @@ a {
 a:link,
 a:active,
 a:visited {
-  color: var(--text-colour, black);
+  color: var(--light, black);
   text-decoration: solid underline var(--link-line, crimson);
+  padding: 0.3rem;
 }
 
 a:hover,
 a:focus {
-  background-color: black;
-  color: aliceblue;
-  border: 1px solid;
-  /* padding: 1rem; */
-  padding: 0.3rem 0.6rem;
+  background-color: var(--dark);
+  color: var(--light);
+  /* border: 1px solid; */
+  padding: 0.3rem;
   text-decoration: dotted underline var(--link-line, crimson);
 }
 
@@ -174,6 +179,7 @@ main.flex-gallery article {
 main.grid-gallery {
   /* display: grid; */
   display: none;
+  overflow: hidden;
   /* grid-template-columns: repeat(4, 1fr); */
   /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
@@ -241,13 +247,11 @@ picture,
 video {
   max-width: 100%;
   max-height: 80vh;
-  /* max-height: 800px; */
   /* transition - <property> <duration> <timing-function> <delay>; */
   transition: 0.5s;
 }
 
 article img:hover {
-  /* scale: 0.95; */
   scale: 1.05;
   filter: sepia(75%);
   cursor: pointer;
@@ -311,8 +315,8 @@ article img:hover {
   background-color: black;
   color: lavender;
   display: none; 
-  position: fixed;   /* Stay in place */
-  z-index: 1;        /* Sit on top */
+  position: fixed;
+  z-index: 1;
   top: 0;
   width: 100%;
   height: 100%;
@@ -333,7 +337,6 @@ article img:hover {
   top: 1rem;
   display: flex; 
   flex-flow: row nowrap;
-  /* align-items: center; */
   justify-content: space-evenly;  
   width: 100%;
   padding: 0.5rem;
@@ -370,7 +373,6 @@ article img:hover {
 }
 
 #modal-controls * {
-  /* flex: 1; */
   padding: 0.5rem;
   background-color: black;
   transition: 1s;
@@ -428,7 +430,7 @@ header {
 }
 
 footer {
-  background-color: gray;
+  background: var(--nav-background);
   padding: 0 1rem;
   position: sticky;
   width: 100%;
@@ -442,14 +444,15 @@ footer {
 footer span a, 
 footer span a:visited,
 footer span a:active {
-  color: aliceblue;
+  color: var(--light);
+  padding: 0.3rem;
 }
 
 footer span a:hover,
 footer span a:focus {
-  background-color: black;
-  border: 1px solid;
-  padding: 0.3rem 0.1rem;
+  background-color: var(--dark);
+  border: none;
+  padding: 0.3rem;
   cursor: pointer;
 }
 
@@ -481,8 +484,6 @@ footer span a:focus {
   animation: slideIn 0.8s;
   padding: 1rem 2rem 1rem 0;
   justify-content: space-evenly;  
-  /* overflow-y: hidden; */
-  /* overflow: auto; */
 }
 
 #about-modal > section {
@@ -492,12 +493,17 @@ footer span a:focus {
 
 /* START Theme switch */
 body:has(.theme-switch__input:checked) {
-  --text-colour: lavender;
-  --gradDark: hsl(198, 44%, 11%);
-  --gradLight: hsl(198, 39%, 29%);
+  /* LIGHT theme */
+  --light: #333;
+  --dark: whitesmoke;
+  --gradDark: rgb(184, 184, 192);
+  --gradLight: rgba(222, 184, 135, 0.85);
+  --background: linear-gradient(90deg, var(--gradDark), var(--gradLight), var(--gradDark));
+  --nav-gradLight: darkgoldenrod;
+  --nav-gradDark: rgba(230, 230, 250, 1);
+  --nav-background: linear-gradient(0deg, var(--nav-gradLight), var(--nav-gradDark), var(--nav-gradLight));
   footer {
-    background-color: black;
-    opacity: 0.89;
+    background: var(--nav-background);
   }
 }
 
@@ -535,15 +541,15 @@ body:has(.theme-switch__input:checked) {
 }
 
 .theme-switch__label::before {
-  content: "\263C";
+  content: "\263E";
   right: 100%;
   margin-right: 10px;
-  color: orange;
 }
 .theme-switch__label::after {
-  content: "\263E";
+  content: "\263C";
   left: 100%;
   margin-left: 10px;
+  color: orange;
 }
 
 .theme-switch__label span::after {
@@ -563,11 +569,10 @@ body:has(.theme-switch__input:checked) {
   transform: translate3d(5.08rem, 0, 0);
 }
 
-.theme-switch__input:checked ~ .theme-switch__label::before {
-  /* color: black; */
-  color: var(--text-colour);
-}
 .theme-switch__input:checked ~ .theme-switch__label::after {
+  color: var(--light);
+}
+.theme-switch__input:checked ~ .theme-switch__label::before {
   color: turquoise;
 }
 /* END Theme switch */
@@ -645,8 +650,7 @@ body:has(.captions-switch__input:checked) {
 }
 
 .captions-switch__input:checked ~ .captions-switch__label::before {
-  /* color: black; */
-  color: var(--text-colour);
+  color: var(--light);
 }
 .captions-switch__input:checked ~ .captions-switch__label::after {
   color: turquoise;
@@ -671,16 +675,13 @@ datalist {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* writing-mode: vertical-lr; */
   width: 150px;
 }
 /* END gap switch */
 
 /* START buttons */
 button {
-  /* min-width: 130px; */
-  /* height: 40px; */
-  color: whitesmoke;
+  color: var(--dark);
   padding: 0.5rem 0.5rem;
   font-weight: bold;
   cursor: pointer;
@@ -690,15 +691,15 @@ button {
   outline: none;
   border-radius: 5px;
   z-index: 0;
-  background: whitesmoke;
+  background: var(--light);
   overflow: hidden;
   border: 1px solid black;
-  color: black;
+  /* color: black; */
 }
 
 button:hover {
-  color: whitesmoke;
-  border-color: whitesmoke;
+  color: var(--light);
+  border-color: var(--light);
 }
 
 button:hover:after {
@@ -714,6 +715,6 @@ button:after {
   top: 0;
   width: 0;
   height: 100%;
-  background: #212529;
+  background: var(--dark);
 }
 /* END buttons */
